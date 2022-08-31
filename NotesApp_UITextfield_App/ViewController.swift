@@ -23,6 +23,8 @@ class ViewController: UIViewController {
         let name = textFieldOutlet.text!
         let age = ageFieldOutlet.text!
         resultOutlet.text = "\(name) is \(age) year(s) old"
+        textFieldOutlet.resignFirstResponder()
+        ageFieldOutlet.resignFirstResponder()
         
     }
     
