@@ -7,7 +7,7 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
 
     @IBOutlet weak var textFieldOutlet: UITextField!
     @IBOutlet weak var resultOutlet: UILabel!
@@ -15,6 +15,7 @@ class ViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        textFieldOutlet.delegate = self
         // Do any additional setup after loading the view.
     }
     
@@ -28,6 +29,12 @@ class ViewController: UIViewController {
         
     }
     
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textFieldOutlet.resignFirstResponder()
+        ageFieldOutlet.resignFirstResponder()
+        return true
+    }
 
 }
 
