@@ -16,6 +16,7 @@ class ViewController: UIViewController, UITextFieldDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         textFieldOutlet.delegate = self
+        ageFieldOutlet.delegate = self
         // Do any additional setup after loading the view.
     }
     
